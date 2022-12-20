@@ -1,7 +1,7 @@
 {
 	"name": "@aliser/ts-transformer-append-js-extension",
 	"description": "A TypeScript transformer for use with ts-patch that will append the JS extension to all relative imports that have no extension.",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"author": "aliser",
 	"repository": "github:@Eleseer/ts-transformer-append-js-extension",
 	"license": "Unlicense",
@@ -10,14 +10,15 @@
 		"build": "tsc",
 		"test": "npm run test --prefix=./tests --loader=ts-node/esm",
 		"commit": "cz",
-		"release": "release-it",
-		"release:dry": "release-it --dry-run",
+		"release": "dotenv release-it",
+		"release:dry": "dotenv release-it --dry-run",
 		"postinstall": "cd ./tests && npm i && cd .."
 	},
 	"devDependencies": {
 		"@types/node": "^18.11.17",
 		"commitizen": "^4.2.6",
 		"cz-conventional-changelog": "^3.3.0",
+		"dotenv-cli": "^6.0.0",
 		"release-it": "^15.5.1",
 		"ts-node": "^10.9.1",
 		"typescript": "^4.9.4"
@@ -26,5 +27,13 @@
 		"commitizen": {
 			"path": "./node_modules/cz-conventional-changelog"
 		}
-	}
+	},
+	"release-it": {
+		"github": {
+			"release": true
+		}
+	},
+	"publishConfig": {
+		"access": "public"
+	  }
 }
