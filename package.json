@@ -6,6 +6,7 @@
 	"repository": "github:@Eleseer/ts-transformer-append-js-extension",
 	"license": "Unlicense",
 	"main": "dist/index.js",
+	"files": ["dist"],
 	"scripts": {
 		"build": "tsc",
 		"test": "npm run test --prefix=./tests --loader=ts-node/esm",
