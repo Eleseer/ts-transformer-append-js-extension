@@ -1,24 +1,30 @@
 {
-	"name": "@zoltu/typescript-transformer-append-js-extension",
-	"description": "A TypeScript transformer for use with ttypescript that will append the JS extension to all relative imports that have no extension.",
-	"version": "1.0.1",
-	"repository": {},
+	"name": "@aliser/ts-transformer-append-js-extension",
+	"description": "A TypeScript transformer for use with ts-patch that will append the JS extension to all relative imports that have no extension.",
+	"version": "0.1.0",
+	"author": "aliser",
+	"repository": "github:@Eleseer/ts-transformer-append-js-extension",
 	"license": "Unlicense",
-	"main": "output/index.js",
-	"devDependencies": {
-		"@types/node": "12.7.1",
-		"ts-node": "8.3.0",
-		"ttypescript": "1.5.7",
-		"typescript": "3.5.3"
-	},
-	"files": [
-		"/output/",
-		"/source/",
-		"README.md",
-		"LICENSE"
-	],
+	"main": "dist/index.js",
 	"scripts": {
 		"build": "tsc",
-		"test": "ttsc -p tests/tsconfig.json && echo Go look at tests/output/index.js to validate transformer did its job, because I'm too lazy to write a real test."
+		"test": "npm run test --prefix=./tests --loader=ts-node/esm",
+		"commit": "cz",
+		"release": "release-it",
+		"release:dry": "release-it --dry-run",
+		"postinstall": "cd ./tests && npm i && cd .."
+	},
+	"devDependencies": {
+		"@types/node": "^18.11.17",
+		"commitizen": "^4.2.6",
+		"cz-conventional-changelog": "^3.3.0",
+		"release-it": "^15.5.1",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.9.4"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
 	}
 }
