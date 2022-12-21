@@ -13,7 +13,7 @@ npm i -D @aliser/ts-transformer-append-js-extension
 ```
 
 # Usage
-1. Install `ts-path` using [the instruction from here](https://github.com/nonara/ts-patch)
+1. Install `ts-patch` using [the instruction from here](https://github.com/nonara/ts-patch)
 2. Add the transformer to `tsconfig.json`
 ```json
 {
