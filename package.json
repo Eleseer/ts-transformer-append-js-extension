@@ -1,12 +1,17 @@
 {
 	"name": "@aliser/ts-transformer-append-js-extension",
 	"description": "A TypeScript transformer for use with ts-patch that will append the JS extension to all relative imports that have no extension.",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"author": "aliser",
 	"repository": "github:@Eleseer/ts-transformer-append-js-extension",
 	"license": "Unlicense",
 	"main": "dist/index.js",
-	"keywords": ["typescript", "transformer", "extensions", "javascript"],
+	"keywords": [
+		"typescript",
+		"transformer",
+		"extensions",
+		"javascript"
+	],
 	"files": [
 		"dist"
 	],
