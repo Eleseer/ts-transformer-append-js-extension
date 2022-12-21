@@ -14,7 +14,7 @@ const paths = {
 }
 
 describe('config with the transformer DISABLED', () => {
-    test('a relative import WITHOUT extension', () => {
+    test('a relative import WITHOUT extension THROWS an error', () => {
         const command = () => execSync(`ts-node-esm --project ${paths.tsconfigs.withoutTransformer} `
             + `${paths.testFiles.importWithoutExtension}`, {
             encoding: 'utf-8'
@@ -23,7 +23,7 @@ describe('config with the transformer DISABLED', () => {
         expect(command).toThrowError();
     });
 
-    test('a relative import WITH extension', () => {
+    test('a relative import WITH extension PASSES without an error', () => {
         const command = () => execSync(`ts-node-esm --project ${paths.tsconfigs.withoutTransformer} `
             + `${paths.testFiles.importWithExtension}`, {
             encoding: 'utf-8'
@@ -36,7 +36,7 @@ describe('config with the transformer DISABLED', () => {
 });
 
 describe('config with the transformer ENABLED', () => {
-    test('a relative import WITHOUT extension', () => {
+    test('a relative import WITHOUT extension PASSES without an error', () => {
         const command = () => execSync(`ts-node-esm --project ${paths.tsconfigs.withTransformer} `
             + `${paths.testFiles.importWithoutExtension}`, {
             encoding: 'utf-8'
@@ -45,7 +45,7 @@ describe('config with the transformer ENABLED', () => {
         expect(command).not.toThrowError();
     });
 
-    test('a relative import WITH extension', () => {
+    test('a relative import WITH extension PASSES without an error', () => {
         const command = () => execSync(`ts-node-esm --project ${paths.tsconfigs.withTransformer} `
             + `${paths.testFiles.importWithExtension}`, {
             encoding: 'utf-8'
