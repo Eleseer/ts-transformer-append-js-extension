@@ -19,7 +19,7 @@ npm i -D @aliser/ts-transformer-append-js-extension
 {
   "compilerOptions": {
     "plugins": [
-      { "transform": "../src/index.ts" }
+      { "transform": "@aliser/ts-transformer-append-js-extension" }
     ]
   },
 }
