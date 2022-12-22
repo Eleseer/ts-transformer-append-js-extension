@@ -21,7 +21,7 @@
 		"commit": "cz",
 		"release": "dotenv release-it",
 		"release:dry": "dotenv release-it --dry-run",
-		"postinstall": "cd ./tests && npm i && cd .."
+		"test:install": "cd ./tests && npm i && cd .."
 	},
 	"devDependencies": {
 		"@types/node": "^18.11.17",
