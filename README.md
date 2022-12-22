@@ -7,14 +7,14 @@ Eliminates a need for specifying `.js` extension for relative imports of TypeScr
 Based on [typescript-transformer-append-js-extension](https://github.com/Zoltu/typescript-transformer-append-js-extension) package by @Zoltu, now using [ts-patch](https://github.com/nonara/ts-patch) for transformer capability.
 
 # Installation
-Install using `npm`.
+Install using `npm`:
 ```bash
 npm i -D @aliser/ts-transformer-append-js-extension
 ```
 
 # Usage
-1. Install `ts-patch` using [the instruction from here](https://github.com/nonara/ts-patch)
-2. Add the transformer to `tsconfig.json`
+1. Install `ts-patch` using [the instruction from here](https://github.com/nonara/ts-patch).
+2. Add the transformer to `tsconfig.json`:
 ```json
 {
   "compilerOptions": {
